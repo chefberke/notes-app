@@ -57,7 +57,7 @@ function Tabside() {
 
             {displayedNotes.length === 0 ? (
               <div className="flex items-center justify-center h-full w-full text-[1.3rem] text-gray-400 font-light">
-                You don't have any notes...
+                You dont have any notes...
               </div>
             ) : (
               uniqueCategories.map((category: any) => (
