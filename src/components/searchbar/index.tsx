@@ -10,7 +10,7 @@ function Searchbar() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(search(searchText));
-  }, [searchText]);
+  });
 
   return (
     <div>
