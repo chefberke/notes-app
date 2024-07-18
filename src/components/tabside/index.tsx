@@ -17,17 +17,8 @@ function Tabside() {
   useEffect(() => {
     const filteredNotes =
       currentCategory === "all" ? data : data.filter((item: any) => item.category === currentCategory);
-    // start, end slice
     setDisplayedNotes(filteredNotes);
   }, [currentPage, currentCategory, data]);
-
-  // const handleNextPage = () => {
-  //   setCurrentPage((prevPage) => prevPage + 1);
-  // };
-
-  // const handlePreviousPage = () => {
-  //   setCurrentPage((prevPage) => prevPage - 1);
-  // };
 
   const filteredData = useSelector((item: any) => item.notes.filteredData);
 
@@ -88,29 +79,6 @@ function Tabside() {
           </Box>
         </Tabs.Root>
       </div>
-
-      {/* <div className="h-[6rem] mt-12 max-sm:mt-14">
-        {displayedNotes.length > 0 && (
-          <div className="flex gap-2 items-center justify-center">
-            <button
-              onClick={handlePreviousPage}
-              disabled={currentPage === 1}
-              className="flex items-center justify-center gap-1 bg-blue-500 text-white w-[7rem] rounded-md text-[1.1rem] font-medium h-[2.5rem]"
-            >
-              <MdOutlineKeyboardArrowLeft />
-              Previous
-            </button>
-
-            <button
-              onClick={handleNextPage}
-              disabled={displayedNotes.length < ITEMS_PER_PAGE}
-              className="flex items-center justify-center gap-1 bg-blue-500 text-white w-[7rem] rounded-md text-[1.1rem] font-medium h-[2.5rem]"
-            >
-              Next <MdOutlineKeyboardArrowRight />
-            </button>
-          </div>
-        )}
-      </div> */}
     </div>
   );
 }
