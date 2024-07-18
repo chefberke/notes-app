@@ -8,10 +8,9 @@ function Searchbar() {
   const [searchText, setSearchText] = useState("");
 
   const dispatch = useDispatch();
-
   useEffect(() => {
     dispatch(search(searchText));
-  }, [searchText, setSearchText]);
+  }, [searchText]);
 
   return (
     <div>
